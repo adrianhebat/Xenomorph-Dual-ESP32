@@ -1,7 +1,7 @@
-# XENOMORPH WIFI PENTESTING ESP32
+# Xenomorph ESP32
 ### *Dual-Firmware Penetration Testing Framework (Educational Use Only)*
 
-> ** ETHICS DISCLAIMER:**
+> **ETHICS DISCLAIMER:**
 > This tool is designed **strictly for educational purposes and authorized penetration testing**. Unauthorized use against networks or devices without explicit permission is illegal and unethical. Only deploy this equipment on infrastructure you own or have written authorization to test. By using this software, you agree to comply with all applicable laws and ethical standards.
 
 ---
@@ -10,7 +10,7 @@
 
 Xenomorph is a dual-microcontroller ESP32-based framework for Wi-Fi security research:
 
-- **Muscle (ESP32 - ESP-IDF v4.1.4)**: The attack engine implementing evil twin attacks, deauthentication frames, packet sniffing, WPA handshake capture, rogue AP functionality, and channel hopping. Based on the original [esp32-wifi-penetration-tool](https://github.com/risinek/esp32-wifi-penetration-tool) by @risinek.
+- **Muscle (ESP32 - ESP-IDF v4.1.4)**: The attack engine implementing evil twin attacks, deauthentication frames, packet sniffing, WPA handshake capture, rogue AP functionality, and channel hopping. Based on the original [esp32-wifi-penetration-tool](https://github.com/risinek/esp32-wifi-penetration-tool) by [@risinek](https://github.com/risinek).
 - **Commander (ESP32-S3 - Arduino IDE v2.3.8)**: The UI frontend with OLED 128x64 display, 5-button navigation (UP/DOWN/LEFT/PUSH/RIGHT), and UART interface to control the Muscle firmware.
 
 The two components communicate via a custom UART protocol called **Xeno Protocol v3.0** (115200 baud, XOR checksum framed).
@@ -49,7 +49,7 @@ Unified HTTP server at Management IP (`192.168.4.1`) with a launcher page contai
 
 ## Folder Structure
 
-### 🔧 ESP-IDF — Firmware Muscle (Attack Engine)
+###  ESP-IDF — Firmware Muscle (Attack Engine)
 
 ```
 root/
@@ -84,7 +84,7 @@ root/
 └── build/                       ← Compilation output (excluded by .gitignore)
 ```
 
-### 🖥️ Arduino — Firmware Commander (UI Frontend)
+###  Arduino — Firmware Commander (UI Frontend)
 
 ```
 xenomorph_commander_s3/
@@ -115,7 +115,7 @@ idf.py flash -p <PORT>      # Replace COMx (Windows) or /dev/ttyUSB0 (Linux/Mac)
 idf.py monitor
 ```
 
-> ⏱ Build time varies depending on your computer's specifications. Binary output: `build/esp32/.../firmware.bin`.
+>  Build time varies depending on your computer's specifications. Binary output: `build/esp32/.../firmware.bin`.
 
 ### 2. Build Firmware Commander (Arduino IDE v2.3.8)
 
